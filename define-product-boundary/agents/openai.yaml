@@ -1,0 +1,5 @@
+interface:
+  display_name: "功能卖点界定"
+  short_description: "依据商品页面和所给资料，核实功能、适配限制和包装配件，形成产品边界"
+  default_prompt: "使用 $define-product-boundary 核对商品功能与限制，生成可复用的产品边界。"
+

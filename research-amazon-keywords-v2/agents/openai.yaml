@@ -1,0 +1,5 @@
+interface:
+  display_name: "关键词调研 V2"
+  short_description: "核对商品边界，从竞品反查表筛选广告词，交付带数值依据的词库"
+  default_prompt: "使用 $research-amazon-keywords-v2 自主筛选并复核上传反查词，交付关键词库 Excel。"
+

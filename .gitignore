@@ -1,0 +1,14 @@
+# Local inputs, generated output and credentials
+__pycache__/
+.pytest_cache/
+.tmp/
+.env*
+*.xlsx
+*.xls
+*.csv
+*.tsv
+*.zip
+*.log
+*.jsonl
+产品边界.md
+关键词库.xlsx
