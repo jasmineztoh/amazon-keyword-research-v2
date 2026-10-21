@@ -33,18 +33,19 @@ Excel 一词一行，可筛选。主表显示优先级、关键词、需求层�
 
 ## 安装
 
-1. 从 [Releases 下载 v2.0.0 安装包](https://github.com/jasmineztoh/amazon-keyword-research-v2/releases/tag/v2.0.0)。
-2. 解压后，把两个 Skill 文件夹**并列**放入 Codex Skills 目录，例如 `~/.codex/skills/`：
+**让 Agent 安装：**把下面这句话发给 Codex；它会从公开仓库按名称获取两个 Skill 并安装，无需手动下载或搬运文件。
 
-   ```text
-   ~/.codex/skills/
-   ├── define-product-boundary/
-   └── research-amazon-keywords-v2/
-   ```
+> 请从 GitHub 仓库 `jasmineztoh/amazon-keyword-research-v2` 安装 `define-product-boundary` 和 `research-amazon-keywords-v2` 两个 Skill，确认两个 `SKILL.md` 均可读取，并告诉我安装位置。
 
-3. 运行环境需要 Python 和 `openpyxl>=3.1,<4`。Excel 首选支持 `@oai/artifact-tool` 的 Node 工作环境；没有该工具时，安装包内有基于 `openpyxl` 的后备导出器。
+**用命令安装：**在要使用 Skill 的项目目录运行（需要 Node.js 22.20 或更新版本）：
 
-两个文件夹缺一不可。旧 `.xls` 请先另存为 `.xlsx` 并检查列口径；正式输入支持 `.xlsx`、`.csv` 和 `.tsv`。
+```bash
+npx skills add jasmineztoh/amazon-keyword-research-v2 --skill define-product-boundary --skill research-amazon-keywords-v2 -a codex --copy -y
+```
+
+命令会把两个 Skill 安装到当前项目供 Codex 使用；想在所有项目使用时加 `-g`。安装器用法见 [skills CLI 文档](https://github.com/vercel-labs/skills/blob/main/docs/commands.md)。`npx` 只负责安装；运行关键词 Skill 仍需 Python 和 `openpyxl>=3.1,<4`。Excel 优先使用支持 `@oai/artifact-tool` 的 Node 工作环境，否则使用仓库内的 `openpyxl` 后备导出器。
+
+需要离线安装时，可从 [Releases](https://github.com/jasmineztoh/amazon-keyword-research-v2/releases/tag/v2.0.0) 获取安装包。旧 `.xls` 请先另存为 `.xlsx` 并检查列口径；正式输入支持 `.xlsx`、`.csv` 和 `.tsv`。
 
 ## 使用
 
